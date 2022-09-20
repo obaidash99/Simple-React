@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 
-// Import components
-import Nav from './components/Nav';
-import Tweets from './components/Tweets';
-
 function App() {
+	// Write Javascript HEREE
+	const [counter, setCounter] = useState(0);
+	const [toggle, setToggle] = useState(false);
+
+	const incrementer = () => {
+		setCounter(counter + 1);
+	};
+
+	const toggler = () => {
+		setToggle((prev) => !prev);
+	};
+
 	return (
 		<div className="App">
-			<h1>Helllo React!</h1>
-			<div className="home">
-				<Nav />
-				<Tweets />
-			</div>
+			<h1 className={toggle ? 'active' : ''}>Helllo React!</h1>
+			<h2>Counter {counter}</h2>
+			<button onClick={incrementer}>Click</button>
+			<button onClick={toggler}>Toggle</button>
 		</div>
 	);
 }
