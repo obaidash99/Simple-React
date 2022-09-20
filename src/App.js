@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import Nav from './components/Nav';
+import Video from './components/Video';
 
 function App() {
 	// Write Javascript HEREE
@@ -16,10 +18,13 @@ function App() {
 
 	return (
 		<div className="App">
-			<h1 className={toggle ? 'active' : ''}>Helllo React!</h1>
+			{/* <h1 className={toggle ? 'active' : ''}>Helllo React!</h1>
 			<h2>Counter {counter}</h2>
 			<button onClick={incrementer}>Click</button>
-			<button onClick={toggler}>Toggle</button>
+			<button onClick={toggler}>Toggle</button> */}
+
+			<Nav toggle={toggle} />
+			<Video num={counter} setToggle={toggler} />
 		</div>
 	);
 }
