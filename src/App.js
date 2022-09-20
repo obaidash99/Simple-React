@@ -23,8 +23,9 @@ function App() {
 			<button onClick={incrementer}>Click</button>
 			<button onClick={toggler}>Toggle</button> */}
 
-			<Nav toggle={toggle} />
-			<Video num={counter} setToggle={toggler} />
+			<h1>Hello React!</h1>
+			<button onClick={incrementer}>Increment</button>
+			<h2>{counter}</h2>
 		</div>
 	);
 }
